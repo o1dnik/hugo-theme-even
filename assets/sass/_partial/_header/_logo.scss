@@ -9,6 +9,12 @@
     font-size: $logo-font-size;
     font-family: $logo-font-family;
   }
+
+  .logo-img {
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+  }
 }
 
 @include max-screen() {

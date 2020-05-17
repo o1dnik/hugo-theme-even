@@ -1,9 +1,11 @@
 <div class="logo-wrapper">
   <a href="{{ "/" | relLangURL }}" class="logo">
     {{- if .Site.Params.logoTitle -}}
-      {{ .Site.Params.logoTitle }}
+    {{ .Site.Params.logoTitle }}
+    {{- else if .Site.Params.logoImgSrc -}}
+    <img src="{{ .Site.Params.logoImgSrc }}" class="logo-img">
     {{- else -}}
-      {{ .Site.Title }}
+    {{ .Site.Title }}
     {{- end -}}
   </a>
 </div>
@@ -11,9 +13,9 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     {{ range .Site.Menus.main -}}
-      <li class="menu-item">
-        <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
-      </li>
+    <li class="menu-item">
+      <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
+    </li>
     {{- end }}
   </ul>
 </nav>
