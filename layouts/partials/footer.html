@@ -8,7 +8,7 @@
   {{ if .Site.LanguagePrefix -}}
   <a href="{{ .Site.LanguagePrefix | absURL }}/index.xml" type="application/rss+xml" class="iconfont icon-rss"
     title="rss"></a>
-  {{- else -}}
+  {{- else if .Site.Params.RSSLink -}}
   <a href="{{ .Site.RSSLink }}" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
   {{- end }}
 </div>
@@ -39,13 +39,13 @@
   {{- end }}
 
   <span class="copyright-year">
-    {{- $current := now.Format "2006" }}
+    <span
+      class="author">{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
+    |{{" "}}{{- $current := now.Format "2006" }}
     &copy;
     {{ if ne .Site.Params.since $current -}}
     {{ .Site.Params.since }} -
     {{ end }}
     {{- $current }}
-    <span
-      class="author">{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
   </span>
 </div>
