@@ -1,0 +1,22 @@
+// ==================================
+// Customized Twitter Bootstrap style
+// ==================================
+
+// fix global body bg color
+body {
+  background-color: #fefefe !important;
+}
+
+// fix all links in general
+a {
+  color: #c05b4d !important;
+  text-decoration: none !important;
+}
+
+// fix color of links in header, footer, post-header etc.
+#header a,
+#footer a,
+.post-header a,
+.post-toc a {
+  color: #000 !important;
+}

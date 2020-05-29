@@ -78,6 +78,14 @@
 <link href="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.css" | relURL }}" rel="stylesheet">{{ end }}
 {{- end -}}
 
+<!-- custom external Bootstrap 4 CDN css & js -->
+{{- if .Site.Params.publicCDN.enable -}}
+{{ if .Site.Params.bootstrap4 }}
+{{ .Site.Params.publicCDN.bootstrap4CSS | safeHTML }}
+{{ .Site.Params.publicCDN.bootstrap4JS | safeHTML }}
+{{ end }}
+{{- end -}}
+
 <!-- custom fonts -->
 {{ range .Site.Params.customFonts -}}
 <link rel="stylesheet" href="{{ . }}">

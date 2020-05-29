@@ -6,9 +6,10 @@
   font-family: $global-serif-font-family;
   border-radius: 5px;
   background: $post-toc-backgroud;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
   word-wrap: break-word;
   box-sizing: border-box;
+  // z-index: 100;
 
   .post-toc-title {
     margin: 0 10px;
@@ -37,7 +38,7 @@
         display: none;
       }
 
-      .has-active > ul {
+      .has-active>ul {
         display: block;
       }
     }
