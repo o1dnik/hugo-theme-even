@@ -82,6 +82,7 @@
 {{- if .Site.Params.publicCDN.enable -}}
 {{ if .Site.Params.bootstrap4 }}
 {{ .Site.Params.publicCDN.bootstrap4CSS | safeHTML }}
+{{ .Site.Params.publicCDN.jquery | safeHTML }}
 {{ .Site.Params.publicCDN.bootstrap4JS | safeHTML }}
 {{ end }}
 {{- end -}}
