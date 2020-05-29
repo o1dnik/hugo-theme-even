@@ -41,8 +41,7 @@
   <span class="copyright-year">
     <span
       class="author">{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
-    |{{" "}}{{- $current := now.Format "2006" }}
-    &copy;
+    <br />&copy;{{- $current := now.Format "2006" }}
     {{ if ne .Site.Params.since $current -}}
     {{ .Site.Params.since }} -
     {{ end }}
