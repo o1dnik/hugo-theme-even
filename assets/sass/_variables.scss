@@ -45,7 +45,8 @@ $global-font-color: #34495e !default;
 $global-font-size: 16px !default;
 
 // Global width of '<body>'.
-$global-body-width: 800px !default;
+// $global-body-width: 800px !default;
+$global-body-width: calc(100%);
 
 // Padding of container main
 $global-container-padding: 0 20px !default;
@@ -163,7 +164,8 @@ $post-toc-width: 200px !default;
 $post-toc-backgroud: rgba($deputy-color, 0.6) !default;
 
 // Margin left of the post toc.
-$post-toc-margin-left: $global-body-width - 15px !default;
+// $post-toc-margin-left: $global-body-width - 15px !default;
+$post-toc-margin-left: calc(100% - 15px) !default;
 
 // Font size of the post toc title.
 $post-toc-title-size: 20px !default;
